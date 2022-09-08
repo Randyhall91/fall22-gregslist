@@ -13,7 +13,7 @@ function drawJobs() {
 
 export class JobsController {
   constructor() {
-    drawJobs()
+
     console.log('the jobs controller')
     appState.on('jobs', drawJobs)
 

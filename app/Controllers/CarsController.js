@@ -24,18 +24,6 @@ export class CarsController {
     drawCars()
   }
 
-
-  // test() {
-  //   // NOTE NEVER DO THIS TESTING ONLY
-
-  //   let testCar = new Car({ make: 'Test', model: 'Car', imgUrl: 'https://conti-engineering.com/wp-content/uploads/2020/05/VirtualVehicleTest_Beitrag.jpg', year: 2000, price: 2000, description: 'test only' })
-
-  //   // NEVER manipulate data directly from a controller its a big NO NO
-  //   appState.cars = [testCar, ...appState.cars]
-
-  // }
-
-
   addCar() {
     try {
       // REVIEW FORM SUBMISSION EXAMPLE 
@@ -47,7 +35,7 @@ export class CarsController {
       let formData = getFormData(form)
 
       carsService.addCar(formData)
-      
+
       // @ts-ignore
       form.reset()
 

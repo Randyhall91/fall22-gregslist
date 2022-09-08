@@ -4,6 +4,7 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
 import { Job } from "./Models/job.js"
+import { House } from "./Models/House.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
@@ -11,8 +12,14 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Car').Car[]} */
   cars = loadState('cars', Car)
+
+
   /**@type {import('./Models/job').Job[]} */
   jobs = loadState('jobs', Job)
+
+
+  /**@type {import('./Models/House.js').House[]} */
+  houses = loadState('houses', House)
 
 }
 
